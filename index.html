@@ -30,7 +30,7 @@
 			position: relative;
 			max-width: 1000px;
 			margin: 0 auto;
-			padding: 80px 20px;
+
 			background-color: rgba(240, 240, 240, 1); /* Light gray with slight transparency */
 		}
 
@@ -42,10 +42,9 @@
 		}
 
         .spacer {
-	        width: calc(100% + 40px);
+	        width: 1000%);
 	        height: 100px;
 	        overflow: hidden;
-	        margin: 40px -20px;
         }
 
         .spacer img {
@@ -55,23 +54,24 @@
 	        display: block;
         }
 
-        .content-section {
-	        background: url('your-background-image.jpg') no-repeat center center;
+        .content-block {
+	        background: url('https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Content_01.jpg') no-repeat center center;
 	        background-size: cover;
 	        padding: 100px 20px;
 	        color: white; /* Or black depending on your image */
         }
 
-        .content-inner {
-	        max-width: 900px;
-	        margin: 0 auto;
-	        background-color: rgba(0, 0, 0, 0.5); /* Optional overlay for contrast */
-	        padding: 40px;
-	        border-radius: 12px;
-	        text-align: center;
+        .content-block h2{
+	        margin-top: 0;
+	        font-size: 32px;
         }
 
-        .content-inner img {
+        .content-block p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .content-block img {
 	        max-width: 100%;
 	        height: auto;
 	        margin-top: 20px;
@@ -93,9 +93,11 @@
             <div class="spacer">
                 <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Spacer_01.jpg" alt="Spacer Image" />
 	        </div>
-			<p>This is scrollable content. The background image stays fixed.</p>
-			<p style="height: 1000px;">Add more content to test scrolling.</p>
-
+            <div class="content-block">
+                <h2>About</h2>
+                <p>Oh hell yeah very cool.</p>
+                <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Content_02.jpg" alt="Content Image" />
+            </div>
 		</section>
 	</div>
 
