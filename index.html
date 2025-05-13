@@ -5,13 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Aidan Audio</title>
     <link rel="icon" href="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Favicon_01.png" type="image/png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
     <style>
+
 		/* Make sure page takes full height and has no margin */
 		html, body {
 			height: 100%;
 			margin: 0;
 			padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: "Caudex", system-ui;
+            font-weight: 300;
+            font-style: normal;
 		}
 
 		/* Fixed full-screen background image */
@@ -158,6 +165,11 @@
             height: 100%;
         }
 
+        .soundcloud-wrapper {
+            padding-top: 20px;
+            width: 100%;
+        }
+
         .steam-image-box {
             position: relative;
             width: 100%;
@@ -193,10 +205,28 @@
             color: white;
             font-size: 40px;
             font-weight: bold;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+            text-shadow:
+                -4px -4px 0 #000,
+                4px -4px 0 #000,
+                -4px  4px 0 #000,
+                4px  4px 0 #000,
+                -4px  0px 0 #000,
+                4px  0px 0 #000,
+                0px -4px 0 #000,
+                0px  4px 0 #000;
             pointer-events: none; /* so the link still works underneath */
             text-align: center;
-    }
+        }
+
+        .white-line {
+            height: 1px;
+            background-color: white;
+            margin-top: -2%;
+            padding: 0;
+            width: 100%;
+            z-index: 10; /* Ensure it's above other content */
+            position: relative; /* Add positioning to bring it in front */
+        }
 
 		.content-wrapper {
 			position: relative;
@@ -275,6 +305,7 @@
                 <h2>Projects</h2>
 
                 <h3>Sound Design</h3>
+                <hr class="white-line" />
 
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/cr-ht6gzy7k"
@@ -287,27 +318,32 @@
                 <p>Here is a description about this sound design. I did foley and sound design. Example123</p>
 
                 <h3>Music</h3>
+                <hr class="white-line" />
 
-                <iframe
-                width="100%"
-                height="166"
-                scrolling="no"
-                frameborder="no"
-                allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1277170924%3Fsecret_token%3Ds-uJ1qFXis8SB&color=%235d4e4c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-                </iframe>
+                <div class="soundcloud-wrapper">
+                    <iframe
+                    width="100%"
+                    height="166"
+                    scrolling="no"
+                    frameborder="no"
+                    allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1277170924%3Fsecret_token%3Ds-uJ1qFXis8SB&color=%235d4e4c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                    </iframe>
+                </div>
 
                 <p>Here is a description about this song. I recorded and mixed it. Example123</p>
                 
                 <h3>Video Games</h3>
+                <hr class="white-line" />
                 
                 <div class="steam-image-box">
                     <a href="https://store.steampowered.com/app/3680390" target="_blank">
-                    <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Steam_01.jpg" alt="Game Image">
+                    <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Steam_02.jpg" alt="Game Image">
                     <div class="steam-overlay-text">Anatomy of the Terrible</div>    
                     </a>
                 </div>
 
+                <p>Here is a description about this game. I did a ton of work on this.</p>
             </div>
 
             <div class="spacer">
