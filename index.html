@@ -78,6 +78,23 @@
 	        display: block;
         }
 
+        .spacer-text {
+            position: absolute;
+            margin-top: -70px;
+            margin-left: 31%;
+            margin-right: 31%;
+            color: rgb(218, 218, 218);
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow:
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px  1px 0 #000,
+                1px  1px 0 #000;
+            z-index: 10;
+        }
+
         .content-block {
             position: relative;
 	        display: flex;
@@ -158,8 +175,6 @@
             z-index: 2;
             overflow: hidden;
             max-width: 100%;
-            /*width: 300px;
-            height: 200px;*/
         }
 
         .video-wrapper iframe {
@@ -240,6 +255,8 @@
             border-radius: 8px;
             transition: transform 0.3s ease;
             cursor: pointer;
+            padding-top: 8px;
+            padding-bottom: 20px;
         }
 
         .image-box:hover {
@@ -251,6 +268,36 @@
             height: 100%;
             object-fit: cover;
             margin: 0;
+        }
+
+        .contact-text-mod {
+            flex: 1;
+        }
+
+        .skill-block {
+            width: 100%;
+            height: 52px;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            /*max-height: calc(3 * 60px);*/
+            align-items: center;
+            justify-content: space-evenly;
+            padding-bottom: 20px;
+        }
+
+        .skill-block img {
+            width: 52px;
+            height: auto;
+            margin-right: 12px;
+            object-fit: cover;
+        }
+
+        .skill-block p {
+            align-items: center;
+            height: 35%;
+            font-size: 23px;
         }
 
 		.content-wrapper {
@@ -285,6 +332,16 @@
 
             .video-wrapper {
                 padding-bottom: 75%;
+            }
+
+            .contact-text-mod {
+                margin-top: -20px;
+            }
+
+            .spacer-text {
+                margin-top: -80px;
+                margin-left: 20%;
+                margin-right: 20%;
             }
         }
 
@@ -377,13 +434,49 @@
 	        
             </div>
 
+            <div class="content-block-vert">
+                <h2>Skills</h2>
+
+                <h3>Audio</h3>
+                <hr class="white-line" />
+
+                    <div class="skill-block">
+                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                        <p>Pro Tools</p>
+                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                        <p>Bitwig Studio</p>
+                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                        <p>Bitwig Studio</p>
+                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                        <p>Bitwig Studio</p>
+                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                        <p>Bitwig Studio</p>
+                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                        <p>Bitwig Studio</p>
+                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                        <p>Bitwig Studio</p>
+                    </div>
+
+                <h3>Game Development</h3>
+                <hr class="white-line" />
+
+            </div>
+
+            <div class="spacer">
+
+                <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Spacer_01.jpg" alt="Spacer Image" />
+	        
+            </div>
+
             <div class="content-block justify-even">
 
                 <h2>Contact</h2>
 
+                <p class="contact-text-mod">Thanks for checking out my portfolio! Feel free to connect with me at aidanreedaudio [@] gmail [.] com or with these links!</p>
+                
                 <a href="mailto:aidanreedaudio@gmail.com" target="_blank">
                     <div class="image-box">
-                    <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                    <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_02.png" alt="Image">
                     </div>
                 </a>
 
@@ -398,7 +491,8 @@
             <div class="spacer">
 
                 <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Spacer_01.jpg" alt="Spacer Image" />
-	        
+                <div class="spacer-text">Website developed by Aidan Reed.<br>All background images courtesy of Unsplash and their respective creators.</div>
+
             </div>
 
 		</section>
