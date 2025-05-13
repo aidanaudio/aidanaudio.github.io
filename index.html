@@ -84,13 +84,33 @@
 	        color: white;
         }
 
-        .content-block h2{
+        .content-block-vert {
+            position: relative;
+	        display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background: url('https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Content_01.jpg') no-repeat center center;
+	        background-size: cover;
+	        padding: 100px 40px 20px;
+            padding-top: 100px;
+	        color: white;
+        }
+
+        .content-block h2,
+        .content-block-vert h2 {
             position: absolute;
             top: 1%;
             left: 50%;
             transform: translate(-50%, -50%);
 	        padding-top: 40px;
 	        font-size: 40px;
+        }
+
+        .content-block h3,
+        .content-block-vert h3 {
+            font-size: 30px;
         }
 
         .content-block p {
@@ -100,8 +120,14 @@
             max-width: 56%;
         }
 
-        .content-block img {
-	        max-width: 100%;
+        .content-block-vert p {
+            flex: 1;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .content-block img,
+        .content-block-vert img {
 	        height: auto;
             margin-top: 20px;
 	        border-radius: 8px;
@@ -110,6 +136,54 @@
         .small-image{
 	        width: 40%;
 	        height: auto;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            width: 100%;
+            z-index: 2;
+            overflow: hidden;
+            max-width: 100%;
+            /*width: 300px;
+            height: 200px;*/
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .steam-image-box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px; /* Rounded corners for the image */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+            transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+        }
+
+        .steam-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the area without distorting */
+        }
+
+        .steam-image-box:hover {
+            transform: scale(1.05); /* Slightly zooms the image when hovered */
+        }
+
+        /* Optional: add text overlay or effects */
+        .steam-image-box a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
         }
 
 		.content-wrapper {
@@ -141,6 +215,10 @@
             .small-image {
                 width: 80%;
             }
+
+            .video-wrapper {
+                padding-bottom: 75%; /* Adjusted for mobile */
+            }
         }
 
 	</style>
@@ -148,28 +226,85 @@
 <body>
 	<div class="background"></div>
 	<div class="content-wrapper">
+
 		<section class="hero">
 
             <div class="title-block">
+
 			    <h1 class="hero-title">Aidan Audio</h1>
+
             </div>
 
             <div class="spacer">
+
                 <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Spacer_01.jpg" alt="Spacer Image" />
-	        </div>
+	        
+            </div>
 
             <div class="content-block">
+
                 <h2>About</h2>
+
                 <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/content/Portrait_01.jpg" class="small-image" alt="Content Image" />
+                
                 <p>Hello! My name is Aidan Reed and I’m an 18-year-old aspiring audio engineer. I have been experimenting with music and digital audio for around three years, and I aim to continue learning and improving these crafts.<br><br>
                 While at UVU, I plan to explore most aspects of the production and editing of professional audio. Through the aid of the Digital Audio program, this will involve gaining a better knowledge of sound physics and acoustics, learning how to effectively record various sound sources in different situations, understanding and using professional industry equipment, learning how to alter and mix audio, and learning how to master/finalize tracks.</p>
+            
             </div>
 
             <div class="spacer">
+
                 <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Spacer_01.jpg" alt="Spacer Image" />
-	        </div>
+	        
+            </div>
+
+            <div class="content-block-vert">
+
+                <h2>Projects</h2>
+
+                <h3>Sound Design</h3>
+
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/cr-ht6gzy7k"
+                    title="Aidan Reed - Synth Match Assignment - Preset 1 (Soprano Hell)" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <p>Here is a description about this sound design. I did foley and sound design. Example123</p>
+
+                <h3>Music</h3>
+
+                <iframe
+                width="100%"
+                height="166"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1277170924%3Fsecret_token%3Ds-uJ1qFXis8SB&color=%235d4e4c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                </iframe>
+
+                <p>Here is a description about this song. I recorded and mixed it. Example123</p>
+                
+                <h3>Video Games</h3>
+                
+                <div class="steam-image-box">
+                    <a href="https://store.steampowered.com/app/3680390" target="_blank">
+                    <img src="https://example.com/your-image.jpg" alt="Game Image">
+                     </a>
+                </div>
+
+            </div>
+
+            <div class="spacer">
+
+                <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Spacer_01.jpg" alt="Spacer Image" />
+	        
+            </div>
 
 		</section>
+
 	</div>
 
 </body>
