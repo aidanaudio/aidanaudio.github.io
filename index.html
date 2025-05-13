@@ -229,6 +229,27 @@
             position: relative; /* Add positioning to bring it in front */
         }
 
+        .image-box {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            margin: 0 200px;
+        }
+
+        .image-box:hover {
+            transform: scale(1.1);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
 		.content-wrapper {
 			position: relative;
 			z-index: 1;
@@ -260,7 +281,7 @@
             }
 
             .video-wrapper {
-                padding-bottom: 75%; /* Adjusted for mobile */
+                padding-bottom: 75%;
             }
         }
 
@@ -345,6 +366,30 @@
                 </div>
 
                 <p>Here is a description about this game. I did a ton of work on this.</p>
+            </div>
+
+            <div class="spacer">
+
+                <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Spacer_01.jpg" alt="Spacer Image" />
+	        
+            </div>
+
+            <div class="content-block">
+
+                <h2>Contact</h2>
+
+                <a href="mailto:aidanreedaudio@gmail.com" target="_blank">
+                    <div class="image-box">
+                    <img src="https://via.placeholder.com/50" alt="Image">
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/aidanreedaudio/" target="_blank">
+                    <div class="image-box">
+                    <img src="https://via.placeholder.com/50" alt="Image">
+                    </div>
+                </a>
+
             </div>
 
             <div class="spacer">
