@@ -160,31 +160,43 @@
 
         .steam-image-box {
             position: relative;
-            width: 300px;
-            height: 300px;
+            width: 100%;
+            height: 240px;
             overflow: hidden;
-            border-radius: 8px; /* Rounded corners for the image */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
-            transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+            border-radius: 8px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
         }
 
         .steam-image-box img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the image covers the area without distorting */
+            object-fit: cover;
         }
 
         .steam-image-box:hover {
             transform: scale(1.05); /* Slightly zooms the image when hovered */
         }
 
-        /* Optional: add text overlay or effects */
         .steam-image-box a {
             display: block;
             width: 100%;
             height: 100%;
             text-decoration: none;
         }
+
+        .steam-overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+            pointer-events: none; /* so the link still works underneath */
+            text-align: center;
+    }
 
 		.content-wrapper {
 			position: relative;
@@ -291,8 +303,9 @@
                 
                 <div class="steam-image-box">
                     <a href="https://store.steampowered.com/app/3680390" target="_blank">
-                    <img src="https://example.com/your-image.jpg" alt="Game Image">
-                     </a>
+                    <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Steam_01.jpg" alt="Game Image">
+                    <div class="steam-overlay-text">Anatomy of the Terrible</div>    
+                    </a>
                 </div>
 
             </div>
