@@ -274,23 +274,35 @@
             flex: 1;
         }
 
-        .skill-block {
+        .skill-container {
             width: 100%;
-            height: 52px;
+            height: auto;
             position: relative;
             display: flex;
             flex-wrap: wrap;
             gap: 80px;
-            /*max-height: calc(3 * 60px);*/
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .skill-block {
+            width: auto;
+            /*border: 2px solid white;*/
+            height: 52px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: space-evenly;
-            padding-bottom: 20px;
+            text-align: center;
+            gap: 20px;
         }
 
         .skill-block img {
             width: 52px;
             height: auto;
-            margin-right: 12px;
             object-fit: cover;
         }
 
@@ -310,6 +322,11 @@
 
             .hero-title {
                 font-size: 45px;
+                white-space: nowrap;
+            }
+
+            .content-block h2,
+            .content-block-vert h2 {
                 white-space: nowrap;
             }
 
@@ -435,31 +452,116 @@
             </div>
 
             <div class="content-block-vert">
-                <h2>Skills</h2>
+                <h2>Technical Skills</h2>
 
                 <h3>Audio</h3>
                 <hr class="white-line" />
-
-                    <div class="skill-block">
-                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
-                        <p>Pro Tools</p>
-                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
-                        <p>Bitwig Studio</p>
-                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
-                        <p>Bitwig Studio</p>
-                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
-                        <p>Bitwig Studio</p>
-                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
-                        <p>Bitwig Studio</p>
-                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
-                        <p>Bitwig Studio</p>
-                        <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
-                        <p>Bitwig Studio</p>
+                
+                    <div class="skill-container">
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Pro Tools</p>
+                        </div>
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Bitwig Studio</p>
+                        </div>
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>FL Studio</p>
+                        </div>
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>FMOD Studio</p>
+                        </div>
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Wwise</p>
+                        </div>
                     </div>
 
-                <h3>Game Development</h3>
+                <h3>Development</h3>
                 <hr class="white-line" />
 
+                <div class="skill-container">
+                    <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Unreal Engine</p>
+                    </div>
+                    <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Unity Engine</p>
+                    </div>
+                    <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Blender</p>
+                    </div>
+                    <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>JetBrains Rider</p>
+                    </div>
+                    <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Visual Studio Code</p>
+                    </div>
+                    <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Perforce</p>
+                    </div>
+                    <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Git/GitHub</p>
+                    </div>
+                </div>
+                
+                <h3>Hardware</h3>
+                <hr class="white-line" />
+
+                    <div class="skill-container">
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>SSL Duality Console</p>
+                        </div>
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Audient ASP4816 Console</p>
+                        </div>
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Zoom H4n Recorder</p>
+                        </div>
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Microphones</p>
+                        </div>
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Patch Bays</p>
+                        </div>
+                    </div>
+
+                <h3>Other Media</h3>
+                <hr class="white-line" />
+                    
+                    <div class="skill-container">
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Google Suite</p>
+                        </div>
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Adobe Suite</p>
+                        </div>
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>Vegas Pro</p>
+                        </div>
+                        <div class="skill-block">
+                            <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_01.png" alt="Image">
+                            <p>OBS Studio</p>
+                        </div>
+                    </div>
+                <p></p>
             </div>
 
             <div class="spacer">
