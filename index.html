@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
     <style>
 
-		/* Make sure page takes full height and has no margin */
 		html, body {
 			height: 100%;
 			margin: 0;
@@ -19,9 +18,9 @@
             font-family: "Caudex", system-ui;
             font-weight: 300;
             font-style: normal;
+            scroll-behavior: smooth;
 		}
 
-		/* Fixed full-screen background image */
 		.background {
 			position: fixed;
 			top: 0;
@@ -30,7 +29,7 @@
 			height: 100%;
 			background: url('https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Site_Background_02.jpg') no-repeat center center;
 			background-size: cover;
-			z-index: -1; /* Push it behind the content */
+			z-index: -1;
 		}
 
 		/* Scrollable content section */
@@ -38,7 +37,7 @@
 			position: relative;
 			max-width: 1000px;
 			margin: 0 auto;
-			background-color: rgb(0, 0, 0); /* Light gray with slight transparency */
+			background-color: rgb(0, 0, 0);
 		}
 
         .hero-title {
@@ -52,6 +51,24 @@
             text-align: center;
             color:white;
 		}
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: url('https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Content_03.jpg') no-repeat center center;
+	        background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            z-index: 999;
+        }
+
+        .navbar a {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            padding: 20px;
+        }
 
         .title-block {
             position: relative;
@@ -399,6 +416,14 @@
 
 		<section class="hero">
 
+            <div class="navbar">
+
+                <a href="#projects">Projects</a>
+                <a href="#toolkit">My Toolkit</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
             <div class="title-block">
 
 			    <h1 class="hero-title">Aidan Audio</h1>
@@ -406,6 +431,7 @@
             </div>
 
             <div class="spacer"></div>
+
 
             <div class="content-block">
 
@@ -420,8 +446,10 @@
 
             <div class="spacer"></div>
 
-            <div class="content-block-vert">
+        <section id="projects">
 
+            <div class="content-block-vert">
+        
                 <h2>Projects</h2>
 
                 <h3>Sound Design</h3>
@@ -482,7 +510,11 @@
                 <p>Anatomy of the Terrible is an ongoing project built from scratch by three audio engineers: Kyle Asman, Trevor Brown, and Aidan Reed. It is a small-scale horror experience focused on exploration and puzzle solving in an ever intensifying environment. Enter the home, explore its secrets, do what you can to get out alive.</p>
             </div>
 
+        </section>
+
             <div class="spacer"></div>
+
+        <section id="toolkit">
 
             <div class="content-block-vert">
                 <h2>My Toolkit</h2>
@@ -597,8 +629,12 @@
                 <p></p>
             </div>
 
+        </section>
+
             <div class="spacer"></div>
 
+        <section id="contact">
+        
             <div class="content-block justify-even">
 
                 <h2>Contact</h2>
@@ -618,6 +654,8 @@
                 </a>
 
             </div>
+
+        </section>
 
             <div class="spacer">
 
