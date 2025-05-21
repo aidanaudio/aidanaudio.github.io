@@ -55,19 +55,37 @@
         .navbar {
             position: sticky;
             top: 0;
-            background: url('https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Content_03.jpg') no-repeat center center;
+            background: url('https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Spacer_01.jpg') no-repeat center center;
 	        background-size: cover;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
             z-index: 999;
+            color: white;
         }
 
         .navbar a {
             font-size: 30px;
             font-weight: bold;
-            color: white;
-            padding: 20px;
+            padding-top: 20px;
+            padding-bottom: 25px;
+            text-decoration: none;       /* Remove underline */
+            color: inherit;    
+            transition: transform 0.2s ease, content 0.2s ease;
+        }
+        
+        .navbar a:visited,
+        .navbar a:active {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .navbar a:hover {
+            transform: scale(1.1);
+        }
+
+        section {
+            scroll-margin-top: 80px;
         }
 
         .title-block {
@@ -419,7 +437,7 @@
             <div class="navbar">
 
                 <a href="#projects">Projects</a>
-                <a href="#toolkit">My Toolkit</a>
+                <a href="#toolkit">Toolkit</a>
                 <a href="#contact">Contact</a>
 
             </div>
