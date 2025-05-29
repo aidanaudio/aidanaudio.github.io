@@ -32,7 +32,6 @@
 			z-index: -1;
 		}
 
-		/* Scrollable content section */
 		.hero {
 			position: relative;
 			max-width: 1000px;
@@ -189,6 +188,11 @@
             margin-top: 20px;
 	        border-radius: 8px;
         }
+
+        .center-container {
+            width: 100%;
+            text-align: center;
+        }
         
         .small-image{
 	        width: 40%;
@@ -198,7 +202,7 @@
         .video-wrapper {
             position: relative;
             margin-top: 15px;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             height: 0;
             width: 100%;
             z-index: 2;
@@ -236,7 +240,7 @@
         }
 
         .steam-image-box:hover {
-            transform: scale(1.05); /* Slightly zooms the image when hovered */
+            transform: scale(1.05);
         }
 
         .steam-image-box a {
@@ -263,8 +267,37 @@
                 4px  0px 0 #000,
                 0px -4px 0 #000,
                 0px  4px 0 #000;
-            pointer-events: none; /* so the link still works underneath */
+            pointer-events: none;
             text-align: center;
+        }
+
+        .credits-container {
+            width: 100%;
+            display: flex;
+            /* border: 2px solid white; */
+            align-content: center;
+            justify-content: space-evenly;
+        }
+
+        .credits-container h4 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 0;
+            line-height: 1.3;
+            text-align: center;
+            color: white;
+        }
+
+        .credits-container p {
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: center;
+            color: white;
+        }
+
+        .credits-inner {
+            flex-direction: column;
+            justify-content: flex-start;
         }
 
         .white-line {
@@ -273,11 +306,11 @@
             margin-top: -2%;
             padding: 0;
             width: 100%;
-            z-index: 10; /* Ensure it's above other content */
-            position: relative; /* Add positioning to bring it in front */
+            z-index: 10;
+            position: relative;
         }
 
-        .image-box {
+        .contact-image-box {
             width: 80px;
             height: 80px;
             overflow: hidden;
@@ -288,11 +321,11 @@
             padding-bottom: 20px;
         }
 
-        .image-box:hover {
+        .contact-image-box:hover {
             transform: scale(1.1);
         }
 
-        .image-box img {
+        .contact-image-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -397,6 +430,10 @@
                 scroll-margin-top: 70px;
             }
 
+            .credits-container {
+                flex-direction: column;
+            }
+
             .title-block {
                 background: url('https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/background/Content_Mobile_03.jpg');
                 background-size: 100% auto;
@@ -486,7 +523,7 @@
 
                 <h2>About</h2>
 
-                <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/content/Portrait_01.jpg" class="small-image" alt="Portrait of Aidan Reed" />
+                <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/content/Portrait_02.jpg" class="small-image" alt="Portrait of Aidan Reed" />
                 
                 <p>
                     Hi! My name is Aidan Reed and I’m an 18-year-old aspiring audio engineer.
@@ -515,13 +552,55 @@
 
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/cr-ht6gzy7k"
-                    title="Aidan Reed - Synth Match Assignment - Preset 1 (Soprano Hell)" frameborder="0"
+                    title="Insert Title Here" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                     </iframe>
                 </div>
 
-                <p>Here is a description about this sound design. I did foley and sound design. Example123</p>
+                <div class="center-container">
+                    <p>My sound design demo reel.</p>
+                </div>
+                
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/cr-ht6gzy7k"
+                    title="Insert Title Here" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="center-container">
+                    <p>A sound redesign of a trailer for the movie "9" (2009).</p>
+                </div>
+
+                <div class="credits-container">
+                    <div class="credits-container credits-inner">
+                        <h4>Voice Acting</h4>
+                        <p>
+                            #1: Kyle Asman<br>
+                            #2: Kyle Asman, Aidan Reed<br>
+                            #3 & 4: Blair Kerbo<br>
+                            #5: Dustin Stephens<br>
+                            #6: Sherilyn Stephens<br>
+                            #7: Blair Kerbo<br>
+                            #8: Dustin Stephens<br>
+                            #9: Aidan Reed<br>
+                            Doll Extras: Brody Reed, Aidan Reed<br>
+                            Human: Brody Reed
+                        </p>
+                    </div>
+                    <div class="credits-container credits-inner">
+                        <h4>Production</h4>
+                        <p>
+                            Sound Designer: Aidan Reed<br>
+                            Re-Recording Mixer: Aidan Reed<br>
+                            ADR Engineer: Aidan Reed<br>
+                            Foley Artist: Aidan Reed<br>
+                            Foley Session Operator: Trevor Brown
+                        </p>
+                    </div>
+                </div>
 
                 <h3>Music</h3>
                 
@@ -538,10 +617,27 @@
                     </iframe>
                 </div>
 
-                <p>A song about a despondent creature who wanders the snowy forest.</p>
-               
-                <a href="https://soundcloud.com/red-spriggan-150624779/the-wanderer-reimagined-demo-release" target="_blank" rel="noopener noreferrer">Track Credits</a>
+                <div class="center-container">
+                    <p>A song about a despondent creature who wanders the snowy forest.</p>
+                </div>
 
+                <!--
+                <a href="https://soundcloud.com/red-spriggan-150624779/the-wanderer-reimagined-demo-release" target="_blank" rel="noopener noreferrer">Track Credits</a>
+                -->
+
+                <div class="credits-container credits-inner">
+                    <h4>Credits</h4>
+                    <p>
+                        Vocals: Blair Kerbo, Aidan Reed | 
+                        Guitar & Bass: Aidan Reed | 
+                        Songwriting: Aidan Reed | 
+                        Track Production: Aidan Reed<br>
+                        Recording Engineer: Aidan Reed | 
+                        Assistant Recording Engineer: Blair Kerbo | 
+                        Mixing Engineer: Aidan Reed<br><br><br>
+                    </p>
+                </div>
+                
                 <div class="soundcloud-wrapper">
                     <iframe
                     width="100%"
@@ -552,11 +648,26 @@
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2099256102&color=%235d4e4c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
                     </iframe>
                 </div>
-
-                <p>A song about nomads traversing an unknown realm.</p>
                 
+                <div class="center-container">
+                    <p>A song about nomads traversing an unknown realm.</p>
+                </div>
+                
+                <!--
                 <a href="https://soundcloud.com/red-spriggan-150624779/traveling-realm" target="_blank" rel="noopener noreferrer">Track Credits</a>
-
+                -->
+                
+                <div class="credits-container credits-inner">
+                    <h4>Credits</h4>
+                    <p>
+                        Vocals: Aidan Reed | 
+                        Guitar: Aidan Reed | 
+                        Songwriting: Aidan Reed<br>
+                        Track Production: Aidan Reed | 
+                        Recording Engineer: Aidan Reed | 
+                        Mixing Engineer: Aidan Reed<br><br>
+                    </p>
+                </div>
                 
                 <h3>Video Games</h3>
                 
@@ -570,7 +681,41 @@
                 </div>
 
                 <p>Anatomy of the Terrible is an ongoing project built from scratch by three audio engineers: Kyle Asman, Trevor Brown, and Aidan Reed. It is a small-scale horror experience focused on exploration and puzzle solving in an ever intensifying environment. Enter the home, explore its secrets, do what you can to get out alive.</p>
-            
+                
+                <div class="credits-container">
+                    <div class="credits-container credits-inner">
+                        <h4>Kyle Asman</h4>
+                        <p>
+                            Project Manager<br>
+                            Sound Designer<br>
+                            Sound Implementer<br>
+                            Legal & Finance Officer<br>
+                            Primary Narrative Designer<br>
+                            Primary 3D Asset Artist
+                        </p>
+                    </div>
+                    <div class="credits-container credits-inner">
+                        <h4>Trevor Brown</h4>
+                        <p>
+                            Sound Designer<br>
+                            Sound Implementer<br>
+                            Primary Systems Programmer<br>
+                            Primary Workflow Coordinator<br>
+                            Primary UI Designer
+                        </p>
+                    </div>
+                    <div class="credits-container credits-inner">
+                        <h4>Aidan Reed</h4>
+                        <p>
+                            Sound Designer<br>
+                            Sound Implementer<br>
+                            3D Asset Animator<br>
+                            Primary Gameplay Programmer<br>
+                            Primary Source Control Technician
+                        </p>
+                    </div>
+                </div>
+
             </div>
 
         </section>
@@ -738,13 +883,13 @@
                 <p class="contact-text-mod">Thanks for checking out my portfolio! Feel free to connect with me at aidanreedaudio [@] gmail [.] com or with these links!</p>
                 
                 <a href="mailto:aidanreedaudio@gmail.com" target="_blank">
-                    <div class="image-box">
+                    <div class="contact-image-box">
                     <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/Mail_02.png" alt="Image">
                     </div>
                 </a>
 
                 <a href="https://www.linkedin.com/in/aidanreedaudio/" target="_blank">
-                    <div class="image-box">
+                    <div class="contact-image-box">
                     <img src="https://raw.githubusercontent.com/aidanaudio/aidanaudio.github.io/refs/heads/main/media/icons/LinkedIn_01.png" alt="Image">
                     </div>
                 </a>
